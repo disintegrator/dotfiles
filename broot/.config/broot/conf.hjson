@@ -24,7 +24,7 @@
 	# if you don't want the hidden files you can launch `br -H`)
 	# A popular flag is the `g` one which displays git related info.
 	#
-	default_flags: g
+	default_flags: igh
 
 	###############################################################
 	# Date/Time format
@@ -87,11 +87,12 @@
 	# If some paths must be handled specially, uncomment (and change
 	# this section as per the examples)
 	#
-	# special_paths: {
+	special_paths: {
 	# 	"/media/slow-backup-disk"		: no-enter
 	# 	"/home/dys/useless"			: hide
 	# 	"/home/dys/my-link-I-want-to-explore"	: enter
-	# }
+		"*/.git": no-enter
+	}
 
 	###############################################################
 	# Quit on last cancel
@@ -100,7 +101,7 @@
 	# to cancel (for example when you just opened broot), uncomment
 	# this parameter
 	#
-	# quit_on_last_cancel: true
+	quit_on_last_cancel: true
 
 	###############################################################
 	# Search modes
@@ -211,11 +212,11 @@
 		}
 
 		# Here's an example of a shortcut bringing you to your home directory
-		# {
-		# 	invocation: home
-		# 	key: ctrl-home
-		# 	execution: ":focus ~"
-		# }
+		{
+			invocation: "toggle_hidden_alt"
+			key: ctrl-h
+			execution: ":toggle_hidden"
+		}
 
 		# A popular set of shortcuts for going up and down:
 		#
