@@ -14,4 +14,6 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/goyo.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'mtth/scratch.vim'
+Plug 'google/vim-jsonnet'
+Plug 'mhinz/vim-signify'
 call plug#end()
