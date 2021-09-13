@@ -1,0 +1,9 @@
+[user]
+	name = Georges Haidar
+	email = ghaidar0@gmail.com
+[push]
+	default = current
+[alias]
+	lsb = for-each-ref --format='%(refname:short)' refs/heads/**
+	home = "! set -eo pipefail; git lsb | egrep '^(main|master)$' | head -n 1 | xargs git switch --no-guess || echo 'main/master branch not found'"
+

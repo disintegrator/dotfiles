@@ -1,0 +1,16 @@
+tap "homebrew/cask-fonts"
+
+brew "bat"
+brew "broot"
+brew "exa"
+brew "fd"
+brew "fzf"
+brew "git"
+brew "jq"
+brew "neovim"
+brew "ripgrep"
+brew "shellcheck"
+brew "starship"
+brew "z"
+
+cask "font-iosevka-nerd-font"
