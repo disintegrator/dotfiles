@@ -28,6 +28,7 @@ export PATH="$HOME/go/bin:$PYENV_ROOT/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(rbenv init -)"
 eval "$(starship init zsh)"
 
 load_aliases
