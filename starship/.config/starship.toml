@@ -3,3 +3,7 @@ command_timeout = 1000
 
 [jobs]
 number_threshold = 1
+
+[gcloud]
+disabled = true
+
