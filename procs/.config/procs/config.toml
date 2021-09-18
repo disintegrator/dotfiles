@@ -6,6 +6,13 @@ nonnumeric_search = false
 align = "Left"
 
 [[columns]]
+kind = "Ppid"
+style = "BrightYellow|Yellow"
+numeric_search = true
+nonnumeric_search = false
+align = "Left"
+
+[[columns]]
 kind = "User"
 style = "BrightGreen|Green"
 numeric_search = false
