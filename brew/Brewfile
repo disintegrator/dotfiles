@@ -19,6 +19,6 @@ brew "shellcheck"
 brew "starship"
 brew "stow"
 brew "vegeta"
-brew "z"
+brew "zoxide"
 
 cask "font-iosevka-nerd-font"

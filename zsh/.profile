@@ -24,13 +24,13 @@ export PATH="$HOME/go/bin:$PYENV_ROOT/bin:$PATH"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 [ -f "$HOME/.config/broot/launcher/bash/br" ] && . "$HOME/.config/broot/launcher/bash/br"
 [ -f ~/.fzf.zsh ] && . "$HOME/.fzf.zsh"
-. /opt/homebrew/etc/profile.d/z.sh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 load_aliases
 load_secrets
