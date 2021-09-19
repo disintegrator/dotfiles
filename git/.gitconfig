@@ -22,6 +22,12 @@
 	line-numbers-minus-style = "red"
 	line-numbers-plus-style = "green"
 	line-numbers-zero-style = "white"
+	file-style = "yellow"
+	file-decoration-style = "yellow none ul"
+	hunk-header-style = "yellow"
+	hunk-header-file-style = "yellow"
+	hunk-header-line-number-style = "yellow"
+	hunk-header-decoration-style = "yellow box"
 
 [delta "unified"]
 	side-by-side = false
