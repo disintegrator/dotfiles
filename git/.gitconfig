@@ -23,5 +23,8 @@
 	line-numbers-plus-style = "green"
 	line-numbers-zero-style = "white"
 
+[delta "unified"]
+	side-by-side = false
+
 [interactive]
 	diffFilter = delta --color-only
