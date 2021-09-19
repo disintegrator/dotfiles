@@ -12,8 +12,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/goyo.vim'
-Plug 'voldikss/vim-floaterm'
 Plug 'mtth/scratch.vim'
 Plug 'google/vim-jsonnet'
 Plug 'mhinz/vim-signify'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()

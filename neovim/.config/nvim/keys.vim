@@ -3,7 +3,6 @@ let mapleader="\<space>"
 " no more EX mode
 nnoremap Q <Nop>
 
-nnoremap <silent> <Leader>q :tabclose<cr>
 nnoremap <Leader>Q :q!<cr>
 nnoremap <Leader>w :w!<cr>
 nnoremap <Leader>R :exec 'source' stdpath('config').'/init.vim'<cr>
@@ -18,7 +17,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 map <silent> <leader><cr> :noh<cr>
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>q :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
