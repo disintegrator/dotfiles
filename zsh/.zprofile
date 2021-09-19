@@ -1,3 +1,5 @@
+setopt globdots
+
 fpath=($HOME/.myzsh/completions $fpath)
 
 # The next line updates PATH for the Google Cloud SDK.
