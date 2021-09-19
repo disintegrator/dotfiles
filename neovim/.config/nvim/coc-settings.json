@@ -1,4 +1,13 @@
 {
+	"coc.preferences.formatOnSaveFiletypes":  ["*"],
+	"prettier.requireConfig": true,
+	"prettier.onlyUseLocalVersion": true,
+	"diagnostic-languageserver.filetypes": {
+		"sh": "shellcheck"
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"sh": "shfmt"
+	},
   "languageserver": {
     "golang": {
       "command": "gopls",
