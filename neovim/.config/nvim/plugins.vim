@@ -17,4 +17,5 @@ Plug 'google/vim-jsonnet'
 Plug 'mhinz/vim-signify'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
