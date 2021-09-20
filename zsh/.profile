@@ -15,7 +15,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH="$HOME/go"
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 export FZF_DEFAULT_OPTS="--bind ctrl-a:select-all"
 export BAT_THEME=Dracula
 
