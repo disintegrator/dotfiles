@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 export GOPATH="$HOME/go"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden'
-export FZF_DEFAULT_OPTS="--bind ctrl-a:select-all"
+export FZF_DEFAULT_OPTS="--bind ctrl-a:select-all,ctrl-j:preview-up,ctrl-k:preview-down"
 export BAT_THEME=Dracula
 
 export PATH="$HOME/go/bin:$PYENV_ROOT/bin:$PATH"
