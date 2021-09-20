@@ -16,19 +16,20 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+""" Buffers
 " Close the current buffer
 map <leader>q :Bclose<cr>:tabclose<cr>gT
-
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
+nnoremap b] :bnext<cr>
+nnoremap b[ :bprevious<cr>
 
-" Useful mappings for managing tabs
+""" Tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
-
 " always show tab line
 set stal=2
 
