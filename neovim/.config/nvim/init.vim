@@ -18,4 +18,5 @@ call SrcCfg('coc.vim')
 call SrcCfg('go.vim')
 call SrcCfg('ale.vim')
 call SrcCfg('floaterm.vim')
+call SrcCfg('quickui.vim')
 
