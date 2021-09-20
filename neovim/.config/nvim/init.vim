@@ -19,4 +19,7 @@ call SrcCfg('go.vim')
 call SrcCfg('ale.vim')
 call SrcCfg('floaterm.vim')
 call SrcCfg('quickui.vim')
+call SrcCfg('dap.vim')
+call SrcCfg('dap-install.vim')
+call SrcCfg('dap-ui.vim')
 

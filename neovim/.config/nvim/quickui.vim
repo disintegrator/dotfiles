@@ -10,6 +10,16 @@ call quickui#menu#install('&Code', [
             \ [ '&Show documentation', 'ShowDocumentation' ],
             \ ])
 
+call quickui#menu#install('&Debug', [
+            \ [ '&Run', 'DAPContinue' ],
+            \ [ 'Toggle &breakpoint', 'DAPToggleBreakpoint' ],
+            \ [ 'Lo&gging breakpoint', 'DAPLogBreakpoint' ],
+            \ [ '&Conditional breakpoint', 'DAPConditionalBreakpoint' ],
+            \ [ '&Step over', 'DAPStepOver' ],
+            \ [ 'Step &into', 'DAPStepInto' ],
+            \ [ 'Step &out', 'DAPStepOut' ],
+            \ ])
+
 " enable to display tips in the cmdline
 let g:quickui_show_tip = 1
 

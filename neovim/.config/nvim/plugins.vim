@@ -19,5 +19,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'voldikss/vim-floaterm'
 Plug 'mfussenegger/nvim-dap'
+Plug 'Pocco81/DAPInstall.nvim'
+Plug 'rcarriga/nvim-dap-ui'
 Plug 'skywind3000/vim-quickui'
 call plug#end()
