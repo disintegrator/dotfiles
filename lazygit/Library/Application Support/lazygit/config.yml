@@ -1,3 +1,5 @@
+gui:
+  showCommandLog: false
 git:
   paging:
     colorArg: always
