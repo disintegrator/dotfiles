@@ -18,5 +18,6 @@ Plug 'mhinz/vim-signify'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'voldikss/vim-floaterm'
+Plug 'mfussenegger/nvim-dap'
 Plug 'skywind3000/vim-quickui'
 call plug#end()
