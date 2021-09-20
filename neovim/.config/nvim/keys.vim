@@ -21,8 +21,8 @@ map <silent> <leader><cr> :noh<cr>
 map <leader>q :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
-nnoremap b] :bnext<cr>
-nnoremap b[ :bprevious<cr>
+nnoremap ]b :bnext<cr>
+nnoremap [b :bprevious<cr>
 
 """ Tabs
 map <leader>tn :tabnew<cr>
