@@ -12,12 +12,15 @@ call quickui#menu#install('&Code', [
 
 call quickui#menu#install('&Debug', [
             \ [ '&Run', 'DAPContinue' ],
+            \ [ 'Sto&p', 'DAPStop' ],
             \ [ 'Toggle &breakpoint', 'DAPToggleBreakpoint' ],
             \ [ 'Lo&gging breakpoint', 'DAPLogBreakpoint' ],
             \ [ '&Conditional breakpoint', 'DAPConditionalBreakpoint' ],
+            \ [ '&List breakpoints', 'DAPListBreakpoints' ],
             \ [ '&Step over', 'DAPStepOver' ],
             \ [ 'Step &into', 'DAPStepInto' ],
             \ [ 'Step &out', 'DAPStepOut' ],
+            \ [ 'Run &to cursor', 'DAPRunToCursor' ],
             \ ])
 
 " enable to display tips in the cmdline
