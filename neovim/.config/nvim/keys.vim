@@ -37,9 +37,3 @@ set stal=2
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
-" Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-catch
-endtry
-

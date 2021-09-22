@@ -82,3 +82,9 @@ set background=dark
 
 " Use ripgrep instead of grep as default search tool
 set grepprg="rg --vimgrep --smart-case --follow"
+
+" hide quickfix from buffer list
+augroup qf
+    autocmd!
+    autocmd FileType qf set nobuflisted
+augroup END
