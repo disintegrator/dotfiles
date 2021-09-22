@@ -76,6 +76,10 @@ set wrap "Wrap lines
 
 set laststatus=2
 
+set list
+set listchars+=lead:·
+set listchars+=trail:·
+
 syntax enable
 colorscheme dracula
 set background=dark
@@ -88,3 +92,5 @@ augroup qf
     autocmd!
     autocmd FileType qf set nobuflisted
 augroup END
+
+hi link Whitespace SignColumn
