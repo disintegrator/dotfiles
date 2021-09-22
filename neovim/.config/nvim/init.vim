@@ -1,9 +1,6 @@
-function Src(path)
-	exec 'source' a:path
-endfunction
-
 function SrcCfg(path)
-	call Src(stdpath('config') . '/' . a:path)
+	let root = expand('%:p:h')
+	exec 'source' . root . '/' . a:path
 endfunction
 
 call SrcCfg('plugins.vim')
