@@ -23,4 +23,5 @@ Plug 'Pocco81/DAPInstall.nvim'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'skywind3000/vim-quickui'
 Plug 'kevinhwang91/nvim-bqf'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()

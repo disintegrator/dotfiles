@@ -79,6 +79,7 @@ set laststatus=2
 set list
 set listchars+=lead:·
 set listchars+=trail:·
+set listchars+=eol:↴
 
 syntax enable
 colorscheme dracula
