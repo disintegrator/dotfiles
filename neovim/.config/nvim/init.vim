@@ -1,5 +1,5 @@
 function SrcCfg(path)
-	let root = expand('%:p:h')
+	let root = stdpath('config')
 	exec 'source' . root . '/' . a:path
 endfunction
 
