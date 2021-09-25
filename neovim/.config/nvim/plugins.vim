@@ -24,4 +24,5 @@ Plug 'skywind3000/vim-quickui'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'embear/vim-localvimrc'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()

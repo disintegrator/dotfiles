@@ -12,7 +12,7 @@ brew "git-delta"
 brew "go"
 brew "jq"
 brew "lazygit"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "procs"
 brew "rbenv"
 brew "ripgrep"
