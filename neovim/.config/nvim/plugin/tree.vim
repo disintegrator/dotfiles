@@ -1,3 +1,5 @@
+lua require("nvim-tree").setup()
+
 let g:nvim_tree_follow = 1
 let g:nvim_tree_auto_close = 1
 
