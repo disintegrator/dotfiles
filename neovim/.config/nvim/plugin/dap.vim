@@ -10,6 +10,6 @@ command! DAPLogBreakpoint lua require'dap'.set_breakpoint(nil, nil, vim.fn.input
 command! DAPListBreakpoints call ListBreakpoints()
 
 function! ListBreakpoints()
-	copen
-	lua require'dap'.list_breakpoints()
+  copen
+  lua require'dap'.list_breakpoints()
 endfunction

@@ -1,6 +1,6 @@
 function SrcCfg(path)
-	let root = stdpath('config')
-	exec 'source' . root . '/' . a:path
+  let root = stdpath('config')
+  exec 'source' . root . '/' . a:path
 endfunction
 
 call SrcCfg('pre.vim')

@@ -2,8 +2,8 @@ lua <<EOF
 local dap_install = require('dap-install')
 
 dap_install.config('go_delve', {
-	configurations = {
-		{
+  configurations = {
+    {
       type = "go",
       name = "Debug",
       request = "launch",
@@ -24,6 +24,6 @@ dap_install.config('go_delve', {
       mode = "test",
       program = "./${relativeFileDirname}"
     }
-	}
+  }
 })
 EOF
