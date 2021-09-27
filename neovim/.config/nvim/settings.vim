@@ -90,8 +90,13 @@ set grepprg="rg --vimgrep --smart-case --follow"
 
 " hide quickfix from buffer list
 augroup qf
-    autocmd!
-    autocmd FileType qf set nobuflisted
+  autocmd!
+  autocmd FileType qf set nobuflisted
+augroup END
+
+augroup formatting
+  autocmd!
+  autocmd BufWritePre *.go, *.js, *.jsx, *.ts, *.tsx, *.css, *.html, *.sh, *.vim lua vim.lsp.buf.formatting_seq_sync()
 augroup END
 
 hi link Whitespace SignColumn
