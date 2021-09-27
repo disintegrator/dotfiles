@@ -96,7 +96,7 @@ augroup END
 
 augroup formatting
   autocmd!
-  autocmd BufWritePre *.go, *.js, *.jsx, *.ts, *.tsx, *.css, *.html, *.sh, *.vim lua vim.lsp.buf.formatting_seq_sync()
+  autocmd BufWritePre *.go,*.js,*.jsx,*.ts,*.tsx,*.css,*.html,*.sh,*.vim lua vim.lsp.buf.formatting_seq_sync()
 augroup END
 
 hi link Whitespace SignColumn
