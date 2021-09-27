@@ -9,21 +9,22 @@ vim.api.nvim_set_keymap('n', '<Leader>s', '<cmd>lua require("telescope.builtin")
 
 telescope.setup({
   defaults = {
-   mappings = {
-    i = {
-      ["<esc>"] = actions.close,
-      ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-      ["<C-a>"] = actions.send_to_qflist + actions.open_qflist,
+    file_ignore_patterns = {'.licenses/'},
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close,
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-a>"] = actions.send_to_qflist + actions.open_qflist,
+      },
+      n = {
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-a>"] = actions.send_to_qflist + actions.open_qflist,
+      }
     },
-    n = {
-      ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-      ["<C-a>"] = actions.send_to_qflist + actions.open_qflist,
-    }
-   },
   },
   pickers = {
     find_files = {
-      find_command = {'rg', '--files', '--ignore', '--hidden'},
+      find_command = {'fd', '--hidden'},
     },
     live_grep = {
       theme = 'ivy',
