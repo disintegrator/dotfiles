@@ -2,12 +2,12 @@ call quickui#menu#reset()
 
 " install a 'File' menu, use [text, command] to represent an item.
 call quickui#menu#install('&Code', [
-            \ [ 'Go to &definition', 'exec "normal \<Plug>(coc-definition)"' ],
-            \ [ 'Go to &type definition', 'exec "normal \<Plug>(coc-type-definition)"' ],
-            \ [ 'Go to &implementation', 'exec "normal \<Plug>(coc-implementation)"' ],
-            \ [ 'Find &references', 'exec "normal \<Plug>(coc-references)"' ],
-            \ [ 'Re&name', 'exec "normal \<Plug>(coc-rename)"' ],
-            \ [ '&Show documentation', 'ShowDocumentation' ],
+            \ [ 'Go to &definition', 'lua require("cyberdyne.lsp").definitions()' ],
+            \ [ 'Go to &type definition', 'lua require("cyberdyne.lsp").type_definitions()' ],
+            \ [ 'Go to &implementation', 'lua require("cyberdyne.lsp").implementations()' ],
+            \ [ 'Find &references', 'lua require("cyberdyne.lsp").references()' ],
+            \ [ 'Re&name', 'lua require("cyberdyne.lsp").rename()' ],
+            \ [ '&Show documentation', 'lua require("cyberdyne.lsp").hover()' ],
             \ ])
 
 call quickui#menu#install('&Debug', [
