@@ -57,4 +57,15 @@ function M.setup_server(name, config)
   lspc[name].setup(coq.lsp_ensure_capabilities(config))
 end
 
+local formatter_order = {}
+function M.set_formatter_order(...)
+  formatter_order = {...}
+end
+function M.get_formatter_order()
+  return formatter_order
+end
+function M.format()
+  vim.lsp.buf.formatting_seq_sync({}, 1000, formatter_order)
+end
+
 return M
