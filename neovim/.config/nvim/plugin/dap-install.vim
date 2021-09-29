@@ -26,4 +26,24 @@ dap_install.config('go_delve', {
     }
   }
 })
+
+dap_install.config('python', {
+  configurations = {
+    {
+      type = 'python',
+      request = 'launch',
+      program = "${file}",
+      pythonPath = function()
+        local cwd = vim.fn.getcwd()
+        if vim.fn.executable(cwd .. '/venv/bin/python') == 1 then
+          return cwd .. '/venv/bin/python'
+        elseif vim.fn.executable(cwd .. '/.venv/bin/python') == 1 then
+          return cwd .. '/.venv/bin/python'
+        else
+          return 'python'
+        end
+      end
+    }
+  }
+})
 EOF
