@@ -19,7 +19,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 export FZF_DEFAULT_OPTS="--bind ctrl-a:select-all,ctrl-j:preview-up,ctrl-k:preview-down"
 export BAT_THEME=Dracula
 
-export PATH="$HOME/go/bin:$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/go/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
