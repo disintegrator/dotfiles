@@ -1,6 +1,10 @@
-lua require("nvim-tree").setup()
-
-let g:nvim_tree_follow = 1
-let g:nvim_tree_auto_close = 1
+lua <<EOF
+require("nvim-tree").setup({
+  auto_close = true,
+  update_focused_file = {
+    enable = true,
+  },
+})
+EOF
 
 nnoremap <silent> <leader>n <cmd>NvimTreeToggle<cr>
