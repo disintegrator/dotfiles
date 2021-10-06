@@ -1,2 +1,6 @@
 .git/
+
+# neovim workspace
+.nvimw/
+
 .lvimrc
