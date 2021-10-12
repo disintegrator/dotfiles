@@ -96,7 +96,7 @@ augroup END
 
 augroup formatting
   autocmd!
-  autocmd BufWritePre *.go,*.js,*.jsx,*.ts,*.tsx,*.css,*.html,*.sh,*.vim lua require('cyberdyne.lsp').format()
+  autocmd BufWritePre *.go,*.js,*.jsx,*.ts,*.tsx,*.css,*.html,*.sh,*.py,*.vim lua require('cyberdyne.lsp').format()
 augroup END
 
 hi link Whitespace SignColumn
