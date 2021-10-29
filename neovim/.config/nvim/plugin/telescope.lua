@@ -24,7 +24,7 @@ telescope.setup({
   },
   pickers = {
     find_files = {
-      find_command = {'fd', '--hidden'},
+      find_command = {'fd', '--hidden', '--type', 'file'},
     },
     live_grep = {
       theme = 'ivy',
