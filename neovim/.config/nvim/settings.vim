@@ -5,6 +5,8 @@ set history=500
 filetype plugin on
 filetype indent on
 
+set mouse=a
+
 " Set to auto read when a file is changed from the outside
 set autoread
 au FocusGained,BufEnter * checktime
