@@ -22,6 +22,7 @@ brew "shfmt"
 brew "starship"
 brew "stow"
 brew "vegeta"
+brew "xsv"
 brew "zoxide"
 
 cask "font-iosevka-nerd-font"
