@@ -1,5 +1,5 @@
 command! DAPContinue lua require'dap'.continue()
-command! DAPStop lua require'dap'.close()
+command! DAPStop lua require'dap'.terminate()
 command! DAPRunToCursor lua require'dap'.run_to_cursor()
 command! DAPStepInto lua require'dap'.step_into()
 command! DAPStepOver lua require'dap'.step_over()
