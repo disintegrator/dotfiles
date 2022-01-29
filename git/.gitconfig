@@ -11,6 +11,7 @@
 [alias]
 	lsb = for-each-ref --format='%(refname:short)' refs/heads/**
 	home = "! set -eo pipefail; git lsb | egrep '^(main|master)$' | head -n 1 | xargs git switch --no-guess || echo 'main/master branch not found'"
+    wip = commit -a -m 'wip\n\nwip'
 
 [pager]
 	diff = delta
@@ -39,3 +40,5 @@
 	diffFilter = delta --color-only
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
