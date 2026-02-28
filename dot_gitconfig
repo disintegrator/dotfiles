@@ -1,0 +1,50 @@
+[user]
+	email = ghaidar0@gmail.com
+	name = Georges Haidar
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBf96DQjaI2l1dEFfISa4FvLdhyWsc12rDQ7z5+dV4Pg
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[push]
+	autoSetupRemote = true
+	default = current
+[github]
+	user = disintegrator
+[alias]
+	llc = log --stat -n 1
+  l = log --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	h = switch main
+	b = switch -
+	s = stash --include-untracked
+  f = commit -m 'f'
+  a = add .
+[maintenance]
+	repo = /home/disintegrator/code/speakeasy-api/speakeasy
+	repo = /home/disintegrator/github.com/speakeasy-api/openapi-generation
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+
+[includeIf "gitdir:~/code/corp/"]
+  path = ~/.config/git/profiles/corp.inc
+
+[delta]
+	features = line-numbers decorations
+	true-color = always
+	navigate = true
+	line-numbers = true
+	side-by-side = true

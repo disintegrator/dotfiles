@@ -1,0 +1,21 @@
+[tools]
+atuin = "18.12.1"
+bat = "0.26.1"
+chezmoi = "2.69.4"
+eza = "0.23.4"
+fd = "10.3.0"
+github-cli = "2.87.3"
+neovim = "0.11.6"
+node = "24.13.1"
+"npm:@mariozechner/pi-coding-agent" = "0.56.0"
+"npm:@openai/codex" = "0.107.0"
+pnpm = "10.30.2"
+ripgrep = "15.1.0"
+starship = "1.24.2"
+usage = "2.18.1"
+zoxide = "0.9.9"
+
+[settings]
+
+[settings.npm]
+package_manager = "pnpm"

@@ -1,0 +1,12 @@
+alias cat="bat -pP"
+alias vim=nvim
+alias l=eza
+alias ls=eza
+alias ll="eza -l"
+alias la="eza -lha"
+alias p="procs"
+alias pt="procs --tree"
+alias gtn='git tag $(svu next)'
+alias top=btop
+alias m='mise run'
+alias mw='mise watch --restart'

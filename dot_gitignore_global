@@ -1,0 +1,17 @@
+mise.local.toml
+.DS_Store
+._.DS_Store
+.tool-versions
+.telescopeignore
+.fdignore
+*.prof
+scratch/
+node_modules/
+.quokka
+hurl/
+
+.mcp.json
+.vscode/settings.json
+.vscode/launch.json
+.claude/settings.local.json
+local/ssl/
