@@ -2,6 +2,7 @@
 atuin = "18.12.1"
 bat = "0.26.1"
 chezmoi = "2.69.4"
+delta = "latest"
 eza = "0.23.4"
 fd = "10.3.0"
 github-cli = "2.87.3"
