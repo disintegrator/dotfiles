@@ -11,6 +11,6 @@ eval "$(mise activate bash)"
 echo "Applying dotfiles with chezmoi"
 mise exec chezmoi -- chezmoi init --apply https://github.com/disintegrator/dotfiles.git
 
-mise install
+mise exec node pnpm -- mise install
 
 echo "Bootstrap complete."
