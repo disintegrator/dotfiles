@@ -5,7 +5,7 @@ set -euo pipefail
 echo "Installing mise..."
 curl https://mise.run | sh
 
-echo 'eval "$(mise activate bash)"'
+eval "$("$HOME/.local/bin/mise" activate bash)"
 
 echo "Applying dotfiles with chezmoi"
 mise exec chezmoi -- chezmoi init --apply https://github.com/disintegrator/dotfiles.git
