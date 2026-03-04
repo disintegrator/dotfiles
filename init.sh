@@ -13,4 +13,4 @@ mise exec chezmoi -- chezmoi init --apply https://github.com/disintegrator/dotfi
 
 mise exec node pnpm -- mise install
 
-echo "Bootstrap complete."
+echo "Bootstrap complete. Make sure to switch your default shell to zsh."
