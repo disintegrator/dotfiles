@@ -10,3 +10,4 @@ alias gtn='git tag $(svu next)'
 alias top=btop
 alias m='mise run'
 alias mw='mise watch --restart'
+alias pnpx='pnpm dlx'
