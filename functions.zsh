@@ -12,12 +12,3 @@ ghcd() {
 
   cd "$dir"
 }
-
-vsc() {                      
-  local cmd=($HOME/.vscode-server/cli/servers/*/server/bin/remote-cli/code(N[1]))
-  if (( ${#cmd} == 0 )); then                                                                               
-    echo "code not found in ~/.vscode-server" >&2
-    return 1                                                                                                
-  fi            
-  "$cmd" --remote ssh-remote+orb "$@"
-}
