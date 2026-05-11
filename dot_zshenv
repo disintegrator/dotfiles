@@ -1,0 +1,6 @@
+if [[ ! -o interactive ]] && [ -x "$HOME/.local/bin/mise" ]; then
+	eval "$("$HOME/.local/bin/mise" activate zsh --shims)"
+fi
+
+
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
