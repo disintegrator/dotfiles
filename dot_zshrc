@@ -163,3 +163,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # opencode
 export PATH=/home/disintegrator/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/home/disintegrator/.bun/_bun" ] && source "/home/disintegrator/.bun/_bun"
