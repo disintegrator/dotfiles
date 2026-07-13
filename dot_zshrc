@@ -114,9 +114,10 @@ cmd_exists() {
 
 add_to_path() {
   local dir="$1"
+  [ -d "$dir" ] || return          # skip if directory doesn't exist
   case ":$PATH:" in
-    *":$dir:"*) ;;
-    *) export PATH="$dir:$PATH" ;;
+    *":$dir:"*) ;;                  # already present, do nothing
+    *) export PATH="$dir:$PATH" ;;  # otherwise prepend
   esac
 }
 
@@ -129,8 +130,8 @@ add_to_path "$aqua_root/bin"
 add_to_path "$PNPM_HOME"
 add_to_path "$BUN_INSTALL/bin"
 add_to_path "$HOME/.swift/usr/bin"
-
-cmd_exists mise && eval "$($HOME/.local/bin/mise activate zsh)"
+add_to_path "$HOME/.opencode/bin"
+add_to_path "$HOME/go/bin"
 
 [ -f ~/functions.zsh ] && source ~/functions.zsh
 [ -f ~/.secrets.sh ] && source ~/.secrets.sh
@@ -144,6 +145,8 @@ cmd_exists mise && eval "$($HOME/.local/bin/mise activate zsh)"
 [ -f ~/google-cloud-sdk/completion.zsh.inc ] && source ~/google-cloud-sdk/completion.zsh.inc # enables shell command completion for gcloud.
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 
+cmd_exists mise && eval "$($HOME/.local/bin/mise activate zsh)"
+
 cmd_exists starship && eval "$(starship init zsh)"
 cmd_exists zoxide && eval "$(zoxide init zsh)"
 #cmd_exists regolith && eval "$(regolith init zsh)"
@@ -155,14 +158,6 @@ export AQUA_GLOBAL_CONFIG="${xdg_config_home}/aquaproj-aqua/aqua.yaml"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export BUN_INSTALL="$HOME/.bun"
 
-cmd_exists go && add_to_path "$(go env GOPATH)/bin"
-
 export FZF_DEFAULT_OPTS=" \
 --bind ctrl-a:select-all,ctrl-j:preview-up,ctrl-k:preview-down"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# opencode
-export PATH=/home/disintegrator/.opencode/bin:$PATH
-
-# bun completions
-[ -s "/home/disintegrator/.bun/_bun" ] && source "/home/disintegrator/.bun/_bun"
