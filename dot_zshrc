@@ -157,7 +157,9 @@ aqua_root=${AQUA_ROOT_DIR:-${xdg_data_home}/aquaproj-aqua}
 export AQUA_GLOBAL_CONFIG="${xdg_config_home}/aquaproj-aqua/aqua.yaml"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export BUN_INSTALL="$HOME/.bun"
+export BRAIN="$HOME/obsidian/development"
 
 export FZF_DEFAULT_OPTS=" \
 --bind ctrl-a:select-all,ctrl-j:preview-up,ctrl-k:preview-down"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+

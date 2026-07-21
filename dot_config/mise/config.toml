@@ -1,3 +1,9 @@
+[settings]
+pin = true
+
+[settings.npm]
+package_manager = "pnpm"
+
 [tools]
 atuin = "18.16.1"
 bat = "0.26.1"
@@ -11,9 +17,10 @@ fd = "10.4.2"
 github-cli = "2.96.0"
 "github:backnotprop/plannotator" = "0.21.4"
 "github:dalance/procs" = "0.14.12"
-"github:ogulcancelik/herdr" = "0.7.3"
+"github:ogulcancelik/herdr" = "0.7.4"
 "github:vercel-labs/opensrc" = "latest"
 go = "1.26.3"
+jq = "1.8.2"
 kubectl = "latest"
 lnav = "latest"
 minikube = "latest"
@@ -21,15 +28,12 @@ neovim = "0.12.4"
 node = "26.3.1"
 "npm:@mariozechner/pi-coding-agent" = "0.73.1"
 "npm:@openai/codex" = "0.144.1"
+"npm:obsidian-headless" = { version = "0.0.13", allow_builds = ["better-sqlite3"] }
 pitchfork = "2.16.0"
-pnpm = "11.9.0"
+pnpm = "11.15.0"
 ripgrep = "15.1.0"
 rust = "1.96.1"
 starship = "1.26.0"
 usage = "3.5.3"
 zoxide = "0.10.0"
 
-[settings]
-
-[settings.npm]
-package_manager = "pnpm"
