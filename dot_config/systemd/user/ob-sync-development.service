@@ -1,0 +1,14 @@
+[Unit]
+Description=Obsidian headless continuous sync (development vault)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/obsidian/development
+ExecStart=%h/.local/bin/mise run ob-sync
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
