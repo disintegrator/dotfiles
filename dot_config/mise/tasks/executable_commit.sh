@@ -27,12 +27,15 @@ Additional notes to take into account:
     ${usage_notes}"
 fi
 
-exec claude --permission-mode auto -p "
+exec claude --model haiku --permission-mode auto -p "
 Look at staged changes and create a commit following this format:
 
     ${commit_type}(<scope>): <title>
 
     <body>
 ${notes_section}
+
+If there are no staged changes then stage changes first. If there are staged changes then only focus on those and leave unstaged changes alone.
+
 Finally print the commit message to stdout.
 "

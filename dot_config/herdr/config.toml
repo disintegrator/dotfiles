@@ -16,3 +16,9 @@ show_agent_labels_on_pane_borders = true
 agent_panel_sort = "spaces"
 [keys]
 remove_worktree = "prefix+d"
+
+[[keys.command]]
+key = "prefix+u"
+type = "plugin_action"
+command = "disintegrator.trunkr.picker"
+description = "trunkr picker"
