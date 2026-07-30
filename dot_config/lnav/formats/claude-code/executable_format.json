@@ -1,3 +1,4 @@
+#!/usr/bin/env -S lnav -i
 {
     "$schema": "https://lnav.org/schemas/format-v1.schema.json",
     "claude_code_session": {
