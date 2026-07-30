@@ -1,0 +1,161 @@
+{
+    "$schema": "https://lnav.org/schemas/format-v1.schema.json",
+    "claude_code_session": {
+        "title": "Claude Code session transcript",
+        "description": "JSONL session transcripts written by Claude Code under ~/.claude/projects/<encoded-cwd>/<session-uuid>.jsonl and .../<session-uuid>/subagents/agent-*.jsonl",
+        "url": "https://docs.claude.com/en/docs/claude-code",
+        "json": true,
+        "file-pattern": "\\.claude/projects/.*\\.jsonl$",
+        "hide-extra": true,
+        "timestamp-field": "timestamp",
+        "opid-field": "sessionId",
+        "level-field": "type",
+        "level": {
+            "debug": "^(attachment|file-history-delta|file-history-snapshot|queue-operation)$",
+            "info": "^(user|assistant|started|result)$",
+            "notice": "^(system|pr-link|frame-link|fork-context-ref)$"
+        },
+        "line-format": [
+            { "field": "__timestamp__" },
+            " ",
+            { "field": "type", "min-width": 10, "max-width": 10, "overflow": "truncate" },
+            { "field": "subtype", "default-value": "", "prefix": " [", "suffix": "]" },
+            { "field": "operation", "default-value": "", "prefix": " [", "suffix": "]" },
+            { "field": "attachment/type", "default-value": "", "prefix": " [", "suffix": "]" },
+            { "field": "durationMs", "default-value": "", "prefix": " ", "suffix": "ms" },
+            { "field": "attributionSkill", "default-value": "", "prefix": " skill=" },
+            { "field": "attributionAgent", "default-value": "", "prefix": " agent=" },
+            { "field": "agentId", "default-value": "", "prefix": " agentId=" },
+            " ",
+            { "field": "message/content", "default-value": "" },
+            { "field": "content", "default-value": "" },
+            { "field": "prUrl", "default-value": "" },
+            { "field": "trackingPath", "default-value": "" },
+            { "field": "attachment", "default-value": "", "max-width": 400, "overflow": "truncate" }
+        ],
+        "value": {
+            "type": {
+                "kind": "string",
+                "identifier": true,
+                "description": "Transcript entry kind (user, assistant, attachment, system, ...)"
+            },
+            "subtype": {
+                "kind": "string",
+                "identifier": true,
+                "description": "Sub-kind of a system entry (turn_duration, local_command, stop_hook_summary, ...)"
+            },
+            "operation": {
+                "kind": "string",
+                "identifier": true,
+                "description": "Queue operation (enqueue, dequeue, ...)"
+            },
+            "attachment/type": {
+                "kind": "string",
+                "identifier": true,
+                "description": "Attachment kind (hook_success, task_reminder, diagnostics, skill_listing, ...)"
+            },
+            "attachment": {
+                "kind": "json",
+                "description": "Full attachment payload"
+            },
+            "message/content": {
+                "kind": "json",
+                "description": "Message content: array of text/thinking/tool_use/tool_result blocks, or a bare string"
+            },
+            "content": {
+                "kind": "string",
+                "description": "Plain-text body of system and queue-operation entries"
+            },
+            "durationMs": {
+                "kind": "integer",
+                "unit": { "field": "ms" },
+                "description": "Turn duration reported by system/turn_duration entries"
+            },
+            "messageCount": { "kind": "integer", "hidden": true },
+
+            "message/role": { "kind": "string", "identifier": true, "hidden": true },
+            "message/model": { "kind": "string", "identifier": true, "hidden": true },
+            "message/id": { "kind": "string", "identifier": true, "hidden": true },
+            "message/stop_reason": { "kind": "string", "identifier": true, "hidden": true },
+            "message/usage/input_tokens": { "kind": "integer", "hidden": true },
+            "message/usage/output_tokens": { "kind": "integer", "hidden": true },
+            "message/usage/cache_read_input_tokens": { "kind": "integer", "hidden": true },
+            "message/usage/cache_creation_input_tokens": { "kind": "integer", "hidden": true },
+            "message/usage/service_tier": { "kind": "string", "identifier": true, "hidden": true },
+            "toolUseResult": {
+                "kind": "json",
+                "hidden": true,
+                "description": "Structured result of the tool call this user entry is replying to"
+            },
+
+            "uuid": { "kind": "string", "identifier": true, "hidden": true },
+            "parentUuid": { "kind": "string", "identifier": true, "foreign-key": true, "hidden": true },
+            "sessionId": { "kind": "string", "identifier": true, "hidden": true },
+            "requestId": { "kind": "string", "identifier": true, "hidden": true },
+            "promptId": { "kind": "string", "identifier": true, "hidden": true },
+            "messageId": { "kind": "string", "identifier": true, "foreign-key": true, "hidden": true },
+            "snapshotMessageId": { "kind": "string", "identifier": true, "foreign-key": true, "hidden": true },
+            "sourceToolAssistantUUID": { "kind": "string", "identifier": true, "foreign-key": true, "hidden": true },
+            "sourceToolUseID": { "kind": "string", "identifier": true, "hidden": true },
+            "agentId": { "kind": "string", "identifier": true },
+
+            "cwd": { "kind": "string", "identifier": true, "hidden": true },
+            "gitBranch": { "kind": "string", "identifier": true, "hidden": true },
+            "version": { "kind": "string", "identifier": true, "hidden": true },
+            "entrypoint": { "kind": "string", "identifier": true, "hidden": true },
+            "userType": { "kind": "string", "identifier": true, "hidden": true },
+            "sessionKind": { "kind": "string", "identifier": true, "hidden": true },
+            "slug": { "kind": "string", "identifier": true, "hidden": true },
+            "effort": { "kind": "string", "identifier": true, "hidden": true },
+            "mode": { "kind": "string", "identifier": true, "hidden": true },
+            "permissionMode": { "kind": "string", "identifier": true, "hidden": true },
+            "promptSource": { "kind": "string", "identifier": true, "hidden": true },
+            "origin": { "kind": "string", "identifier": true, "hidden": true },
+            "level": { "kind": "string", "identifier": true, "hidden": true },
+            "isSidechain": { "kind": "boolean", "hidden": true },
+            "isMeta": { "kind": "boolean", "hidden": true },
+            "isApiErrorMessage": { "kind": "boolean", "hidden": true },
+            "apiErrorStatus": { "kind": "integer", "hidden": true },
+
+            "attributionSkill": { "kind": "string", "identifier": true },
+            "attributionAgent": { "kind": "string", "identifier": true },
+            "attributionPlugin": { "kind": "string", "identifier": true, "hidden": true },
+            "attributionMcpServer": { "kind": "string", "identifier": true, "hidden": true },
+            "attributionMcpTool": { "kind": "string", "identifier": true, "hidden": true },
+            "toolDenialKind": { "kind": "string", "identifier": true, "hidden": true },
+            "stopReason": { "kind": "string", "identifier": true, "hidden": true },
+            "preventedContinuation": { "kind": "boolean", "hidden": true },
+            "hookCount": { "kind": "integer", "hidden": true },
+
+            "prNumber": { "kind": "integer", "hidden": true },
+            "prUrl": { "kind": "string", "identifier": true },
+            "prRepository": { "kind": "string", "identifier": true, "hidden": true },
+            "trackingPath": { "kind": "string", "identifier": true },
+            "backup/backupFileName": { "kind": "string", "identifier": true, "hidden": true },
+            "backup/version": { "kind": "integer", "hidden": true },
+            "title": { "kind": "string", "hidden": true },
+            "frameUrl": { "kind": "string", "identifier": true, "hidden": true },
+            "path": { "kind": "string", "identifier": true, "hidden": true },
+            "url": { "kind": "string", "identifier": true, "hidden": true }
+        },
+        "highlights": {
+            "tool-use": {
+                "pattern": "\"type\"\\s*:\\s*\"tool_use\"\\s*,\\s*\"id\"\\s*:\\s*\"[^\"]*\"\\s*,\\s*\"name\"\\s*:\\s*\"[^\"]*\"",
+                "color": "Green"
+            },
+            "tool-error": {
+                "pattern": "\"is_error\"\\s*:\\s*true",
+                "color": "Red",
+                "underline": true
+            },
+            "thinking-block": {
+                "pattern": "\"type\"\\s*:\\s*\"thinking\"",
+                "color": "Purple"
+            },
+            "interrupt": {
+                "pattern": "\\[Request interrupted by user[^\\]]*\\]",
+                "color": "Yellow"
+            }
+        }
+    }
+}
