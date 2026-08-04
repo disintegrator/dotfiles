@@ -27,7 +27,7 @@ Additional notes to take into account:
     ${usage_notes}"
 fi
 
-exec claude --model haiku --permission-mode auto -p "
+exec claude --model sonnet --permission-mode auto -p "
 Look at staged changes and create a commit following this format:
 
     ${commit_type}(<scope>): <title>
