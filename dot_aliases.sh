@@ -11,3 +11,5 @@ alias top=btop
 alias m='mise run'
 alias mw='mise watch --restart'
 alias pf='pitchfork'
+alias ws='wt switch'
+alias wh='wt switch ^'
