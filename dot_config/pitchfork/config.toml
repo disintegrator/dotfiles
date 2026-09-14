@@ -1,4 +1,11 @@
 [settings.web]
 auto_start = true
-bind_port = 3120
 bind_address = "127.0.0.1"
+bind_port = 3120
+
+[daemons.otel]
+run = "docker run --rm -p $PORT0:3000 -p $PORT1:3100 -p $PORT2:3200 -p $PORT3:4317 -p $PORT5:4318 --volume $HOME/.local/state/grafana-lgtm:/data --name otel-global grafana/otel-lgtm:0.30.1@sha256:bb182ac3174a20923fa58f00d1790fa71eb06cc0150078c0b0e8feb9e6611492"
+retry = 0
+port = [3000, 3100, 3200, 4317, 4318]
+boot_start = true
+

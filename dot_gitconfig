@@ -10,7 +10,7 @@
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
-	pager = delta
+	pager = hunk pager
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 [url "ssh://git@github.com/"]
@@ -29,6 +29,8 @@
 	s = stash --include-untracked
   f = commit -m 'f'
   a = add .
+	hdiff = -c core.pager=\"hunk pager\" diff
+	hshow = -c core.pager=\"hunk pager\" show
 [maintenance]
 	repo = /home/disintegrator/code/speakeasy-api/speakeasy
 	repo = /home/disintegrator/github.com/speakeasy-api/openapi-generation
@@ -48,3 +50,9 @@
 	navigate = true
 	line-numbers = true
 	side-by-side = true
+[diff]
+	tool = hunk
+[difftool "hunk"]
+	cmd = hunk difftool \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[difftool]
+	prompt = false

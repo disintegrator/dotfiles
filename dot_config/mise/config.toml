@@ -1,39 +1,48 @@
 [settings]
 pin = true
-
-[settings.npm]
-package_manager = "pnpm"
+minimum_release_age_excludes = [
+  "aube",
+  "github:can1357/oh-my-pi",
+  "github:max-sixty/worktrunk",
+  "github:ogulcancelik/herdr",
+  "npm:@openai/codex",
+]
 
 [tools]
-atuin = "18.19.0"
+atuin = "18.21.0"
+aube = "2.1.0"
 bat = "0.26.1"
 btop = "1.4.7"
 bun = "latest"
-chezmoi = "2.72.0"
+chezmoi = "2.72.1"
 delta = "0.19.2"
 dust = "latest"
 eza = "0.23.5"
-fd = "10.4.2"
-github-cli = "2.97.0"
+fd = "10.5.0"
+fzf = "0.74.3"
+github-cli = "2.100.0"
+"github:can1357/oh-my-pi" = "18.1.16"
 "github:dalance/procs" = "0.14.12"
-"github:max-sixty/worktrunk" = "0.71.0"
-"github:ogulcancelik/herdr" = "0.8.0"
+"github:max-sixty/worktrunk" = "0.77.0"
+"github:ogulcancelik/herdr" = "0.9.0"
 "github:vercel-labs/opensrc" = "latest"
-go = "1.26.5"
+go = "1.27.1"
+hunk = "0.21.1"
 jq = "1.8.2"
 kubectl = "latest"
 lnav = "latest"
 minikube = "latest"
-neovim = "0.12.4"
-node = "26.7.0"
+neovim = "0.12.5"
+node = "24.16.0"
 "npm:@mariozechner/pi-coding-agent" = "0.73.1"
-"npm:@openai/codex" = "0.146.1"
+"npm:@openai/codex" = "0.154.0"
 "npm:obsidian-headless" = { version = "0.0.14", allow_builds = ["better-sqlite3"] }
 pitchfork = "2.20.0"
-pnpm = "11.19.0"
+pnpm = "12.3.4"
 ripgrep = "15.2.0"
-rust = "1.97.1"
+rust = "1.98.1"
 starship = "1.26.0"
-usage = "4.1.0"
+stylua = "2.5.2"
+usage = "6.8.0"
 zoxide = "0.10.0"
 
